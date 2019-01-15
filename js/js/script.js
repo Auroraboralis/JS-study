@@ -48,7 +48,7 @@ let mainList = {
     shopGoods: [], 
     employers: [],
     open: true,
-    disount: false
+    disount: true
 }
 
 function chooseGoods() {
@@ -67,6 +67,13 @@ function chooseGoods() {
 }
 chooseGoods();
 
+function Budget () {
+    let i = mainList.budget / 30;
+    price = i
+    console.log("Ежедневный бюджет", i );
+}
+Budget();
+
 function employers() {
     for (let e = 0; e < 4; e++) {
 
@@ -80,6 +87,16 @@ function employers() {
 }
 employers();
 
+function disco () {
+    if (mainList.disount == true) {
+        let i = price / 100 * 80 ;
+        console.log("Цена с учётом скидки!", i );
+    } else { 
+        console.log("Обойдёшься без скидки мудачила!!!");
+    }
+}
+disco ();
+
 function workTime(time) {
     if (time <0) {
         console.log('Такого времени не может быть');
@@ -92,8 +109,7 @@ function workTime(time) {
             }
         }
 workTime(10);
-
-console.log("Ежидневный бюджет", mainList.budget / 30);
+//console.log("Ежидневный бюджет", mainList.budget / 30);
 console.log(mainList); 
 
 
