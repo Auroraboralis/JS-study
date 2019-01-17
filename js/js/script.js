@@ -2,7 +2,7 @@ let
     money,
     name,
     time,
-    price
+    price;
 
 function start() {
         money = prompt("Ваш бюджет?");
@@ -36,10 +36,10 @@ let mainList = {
     dayBudget: function dayBudget () {
         //alert("Ежедневный бюджет " + mainList.budget /30);
         let i = mainList.budget / 30;
-        price = i
+        price = i;
         console.log("Ежедневный бюджет", i );
     },
-    employers: function employers() {
+    employers: function employers () {
         for (let e = 0; e < 4; e++) {   
             let n = prompt("Имя сотрудника?");
             mainList.employers[e] = n;
@@ -73,13 +73,13 @@ let mainList = {
                 }
     },
     chooseShopItems: function chooseShopItems() {
-        let items = prompt ("Перечислите через запятую ваши товары", "")
+        let items = prompt ("Перечислите через запятую ваши товары", "");
         mainList.shopItems = items.split(",");
         mainList.shopItems.push(prompt("Подождите, ещё", ""));
         mainList.shopItems.sort();
     }
     
-}
+};
 
 
 
